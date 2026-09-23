@@ -5,14 +5,14 @@ import tseslint from "typescript-eslint";
 export default defineConfig({
     files: ["**/*.{js,ts}"],
     extends: [js.configs.recommended, tseslint.configs.recommendedTypeChecked],
-    ignores: ["dist", "node_modules"],
+    ignores: ["dist/**", "node_modules/**"],
     languageOptions: {
         parserOptions: {
             projectService: true,
         },
     },
     rules: {
-        // "no-console": "error",
+        "no-console": "error",
         "dot-notation": "error",
     },
 });
